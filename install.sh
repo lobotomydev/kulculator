@@ -56,7 +56,10 @@ install_to_system() {
 
 cleanup() {
   echo "Removing temporary files..."
-  rm -rf "$UNPACK_DIR" "$ARCHIVE_NAME"
+  rm -rf "$UNPACK_DIR"
+  cd ~
+  rm "$ARCHIVE_NAME"
+  rm -rf app/
   echo "Done!"
 }
 

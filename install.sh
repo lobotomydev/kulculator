@@ -47,8 +47,7 @@ install_to_system() {
     echo "Error: Failed to copy the desktop file."
   fi
   
-  sudo mkdir -p "/usr/share/icons/hicolor/128x128/apps/"
-  sudo cp "$UNPACK_DIR/icons/hicolor/128x128/apps/Kulculator_ds.png" "/usr/share/icons/hicolor/128x128/apps/kulculator_ds.png"
+  sudo cp "kulculator/share/icons/hicolor/128x128/apps/" "/usr/share/icons/hicolor/128x128/apps/kulculator_ds.png"
   if [ $? -ne 0 ]; then
     echo "Error: Failed to copy the icon."
   fi

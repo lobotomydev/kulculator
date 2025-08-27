@@ -23,6 +23,8 @@ download_archive() {
 
 unpack_archive() {
   echo "Unpacking archive..."
+  mkdir -p kulculator
+  cd kulculator
   tar -xzf "$ARCHIVE_NAME"
   if [ $? -ne 0 ]; then
     echo "Error: Failed to unpack the archive."
@@ -57,6 +59,7 @@ cleanup() {
   echo "Removing temporary files..."
   rm -rf "$UNPACK_DIR" "$ARCHIVE_NAME"
   echo "Done!"
+  rm -rf kulculator
 }
 
 check_curl

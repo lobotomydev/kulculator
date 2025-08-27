@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ARCHIVE_URL="https://github.com/"
+ARCHIVE_URL="https://github.com/lobotomydev/kulculator/releases/download/1.0.0/kulkulator.tar.gz"
 ARCHIVE_NAME="Kulculator.tar.gz"
 UNPACK_DIR="kulculator"
 

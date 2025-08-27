@@ -35,20 +35,20 @@ unpack_archive() {
 install_to_system() {
   echo "Installing to system directories..."
   
-  sudo cp "$UNPACK_DIR/bin/kulkulator" "/usr/bin/kulculator"
+  sudo cp "$UNPACK_DIR/bin/kulculator" "/usr/bin/kulculator"
   if [ $? -ne 0 ]; then
     echo "Error: Failed to copy the executable to /usr/bin. Administrator rights (sudo) may be required."
     exit 1
   fi
   echo "Executable successfully copied to /usr/bin."
 
-  sudo cp "$UNPACK_DIR/share/applications/kulkulator.desktop" "/usr/share/applications/kulculator.desktop"
+  sudo cp "$UNPACK_DIR/share/applications/kulculator.desktop" "/usr/share/applications/kulculator.desktop"
   if [ $? -ne 0 ]; then
     echo "Error: Failed to copy the desktop file."
   fi
   
   sudo mkdir -p "/usr/share/icons/hicolor/128x128/apps/"
-  sudo cp "$UNPACK_DIR/icons/hicolor/128x128/apps/Kulkulator_ds.png" "/usr/share/icons/hicolor/128x128/apps/kulculator_ds.png"
+  sudo cp "$UNPACK_DIR/icons/hicolor/128x128/apps/Kulculator_ds.png" "/usr/share/icons/hicolor/128x128/apps/kulculator_ds.png"
   if [ $? -ne 0 ]; then
     echo "Error: Failed to copy the icon."
   fi
